@@ -1,0 +1,27 @@
+%h2 Registration
+%hr
+
+=form_tag '/submit_form', class: 'form-horizontal', role: "form", id: 'reg_form', novalidate: true do
+  .form-group.required
+    =label_tag :first_name, "First name:", class: 'control-label col-md-3'
+    .col-md-9
+      =text_field_tag :first_name, nil, class: 'form-control'
+  .form-group.required
+    =label_tag :second_name, "Second name:", class: 'control-label col-md-3'
+    .col-md-9
+      =text_field_tag :second_name, nil, class: 'form-control'
+  .form-group.required
+    =label_tag :email, "Email:", class: 'control-label col-md-3'
+    .col-md-9
+      =email_field_tag :email, nil, class: 'form-control'
+  .form-group.required
+    =label_tag :password, "Password:", class: 'control-label col-md-3'
+    .col-md-9
+      =password_field_tag :password, nil, class: 'form-control', minlength: 4
+  .form-group.required
+    =label_tag :confirm_password, "Confirm password:", class: 'control-label col-md-3'
+    .col-md-9
+      =password_field_tag :confirm_password, nil, class: 'form-control', minlength: 4
+  .form-group
+    .col-md-offset-3.col-md-9
+      =submit_tag "Submit", class: 'btn btn-default'
